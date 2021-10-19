@@ -274,8 +274,8 @@ def export_parabolic(x_nozzle, y_nozzle):
 # Verification: Sutton Table 3-4 "Data on Several Bell-Shaped nozzles"
 # Case: 80% Bell contour, area ratio 10
 
-radius_throat = 1
-area_ratio = 25
+radius_throat = 4.3263
+area_ratio = 4.82
 theta_exit = 8.5 * math.pi / 180
 theta_i = 30 * math.pi / 180
 percent_length_conical = 0.8
