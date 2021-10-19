@@ -114,7 +114,7 @@ def calculate_parabolic(radius_throat, area_ratio, theta_i,
                     + 1.5 * ((1 / math.cos(15 * math.pi / 180)) - 1)) / math.tan(15 * math.pi / 180)
 
     angle_fc =  -(math.pi + (45 * math.pi / 180))
-    N_STEPS_FC = 300
+    N_STEPS_FC = 50
     step_fc = (-math.pi / 2 - angle_fc) / N_STEPS_FC
     theta_fc = np.arange(-3 / 4 * math.pi, -math.pi / 2 + 0.001, step_fc)
 
@@ -126,7 +126,7 @@ def calculate_parabolic(radius_throat, area_ratio, theta_i,
 
     # Second curve (sc)
     angle_sc = -math.pi / 2
-    N_STEPS_SC = 300
+    N_STEPS_SC = 20
     step_sc = theta_i / N_STEPS_SC
     theta_sc = np.arange(angle_sc, theta_i - math.pi / 2 + step_sc, step_sc)
 
@@ -154,7 +154,7 @@ def calculate_parabolic(radius_throat, area_ratio, theta_i,
     coefficient_b = parabola_coefficients[1]
     coefficient_c = parabola_coefficients[2]
 
-    STEPSIZE_Y_TC = 0.001
+    STEPSIZE_Y_TC = 0.1
     y_tc = np.arange(y_sc_endpoint, y_exit + STEPSIZE_Y_TC, STEPSIZE_Y_TC)
     x_tc = coefficient_a * y_tc**2 + coefficient_b * y_tc + coefficient_c
 
