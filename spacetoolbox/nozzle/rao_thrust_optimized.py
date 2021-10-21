@@ -154,7 +154,7 @@ def calculate_parabolic(radius_throat, area_ratio, theta_i,
     coefficient_b = parabola_coefficients[1]
     coefficient_c = parabola_coefficients[2]
 
-    STEPSIZE_Y_TC = 0.1
+    STEPSIZE_Y_TC = 0.01
     y_tc = np.arange(y_sc_endpoint, y_exit + STEPSIZE_Y_TC, STEPSIZE_Y_TC)
     x_tc = coefficient_a * y_tc**2 + coefficient_b * y_tc + coefficient_c
 
